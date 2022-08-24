@@ -33,7 +33,8 @@ class dataBaseController extends Controller
             $Salary = $request->salary;
             DB::table('employee')->insert(['Name' => $Name, 'Age' => $Age, 'Salary' => $Salary]);
             return redirect('/')->with('status', 'Data added successfully');
-        } 
+        }
+        return redirect('/')->with('status', 'Data Edited successfully');
     }
     public function deleteData($Id)
     {
